@@ -29,7 +29,9 @@
                                 </li>
                                 <li><a href="{{ route('products.liste') }}" class="menu-item">Product</a>
                                 </li>
-                                <li><a href="calendar.html" class="menu-item">Calendar</a>
+                                <li><a href="{{ route('utilisateurs.liste') }}" class="menu-item">Utilisateurs</a>
+                                </li>
+                                <li><a href="{{ route('roles.liste') }}" class="menu-item">Roles</a>
                                 </li>
                             </ul>
                         </li>
