@@ -12,14 +12,17 @@ use Illuminate\Queue\SerializesModels;
 class VerifieEmail extends Mailable
 {
     use Queueable, SerializesModels;
-
+    public $utilisateur;
+    public $messag;
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public function __construct($utilisateur, $messag)
     {
-        //
+        $this->utilisateur = $utilisateur;
+        $this->messag = $messag;
     }
+   
 
     /**
      * Get the message envelope.
@@ -27,7 +30,7 @@ class VerifieEmail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Verifie Email',
+            subject:  'Verification de votre email',
         );
     }
 
@@ -37,7 +40,7 @@ class VerifieEmail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            view: 'Mail.email',
         );
     }
 

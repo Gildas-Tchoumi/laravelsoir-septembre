@@ -14,7 +14,7 @@
                             You can also invert the colors—with light text on dark
                             backgrounds—with <code>.table-inverse</code>.
                         </p>
-                        <a href="{{ route('utilisateurs.create') }}" class="btn btn-info">Ajouter un utilisateur</a>
+                        {{-- <a href="{{ route('utilisateurs.create') }}" class="btn btn-info">Ajouter un utilisateur</a> --}}
                     </div>
                     <div class="card-body">
                         <div class="card-block">
